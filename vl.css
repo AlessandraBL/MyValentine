@@ -1,0 +1,150 @@
+/* Estilo general */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #500637, #f1b8cc);
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Contenedor principal */
+.container {
+    background: linear-gradient(135deg, #ffccff, #e4b0bd);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Animación de aparición del contenedor */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Títulos */
+h1{
+    font-family: 'Dancing Script', cursive;
+    color: #252121;
+    margin: 15px 0;
+    font-size: 1.8em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #b4184c;
+    margin: 15px 0;
+    font-size: 1.8em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Botones */
+button {
+    padding: 15px 30px;
+    margin: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+button.yes {
+    background-color: #db6683;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(255, 77, 121, 0.5);
+}
+
+button.no {
+    background-color: #db6683;
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0px 4px 10px rgba(204, 204, 204, 0.5);
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Ocultar el resultado inicialmente */
+.hidden {
+    display: none;
+}
+
+/* Imagenes */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 15px;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.mini-img {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    animation: bounceIn 1s ease forwards;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Imagen de respuesta */
+#imagen {
+    width: 200px;
+    height: auto;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Animación de desvanecimiento de imagen */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilos del mensaje de resultado */
+#resultado h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #ff4d79;
+    font-size: 1.3em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}

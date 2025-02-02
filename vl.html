@@ -1,0 +1,35 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Valentine 💖</title>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="vl.css">
+</head>
+<body>
+    <audio id="bg-music" loop autoplay>
+        <source src="Quieres.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <div class="container">
+        <img src="nosotros.jpeg" alt="corazón" class="mini-img">
+        <h1>Despues de un año de relación, Juan André Salazar Leal...</h1>
+        <h2>¿Quieres ser nuevamente "My Valentine"? 💘</h2>
+        
+        <br>
+        <button class="yes" onclick="respuesta(true)">Sí 💖</button>
+        <button class="no" onclick="respuesta(false)">No 💔</button>
+        <div id="resultado" class="hidden">
+            <h2 id="mensaje"></h2>
+            <img id="imagen" src="" alt="">
+        </div>
+    </div>
+    
+    <script src="vl.js"></script>
+</body>
+</html>
